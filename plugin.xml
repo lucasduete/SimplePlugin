@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-simplePlugin" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>SimplePlugin</name>
+
+    <js-module name="SimplePlugin" src="www/SimplePlugin.js">
+        <clobbers target="cordova.plugins.SimplePlugin" />
+    </js-module>
+
+    <platform name="android">
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="SimplePlugin">
+                <param name="android-package" value="io.github.lucasduete.cordova.simplePlugin.SimplePlugin" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <service
+                android:name="io.github.lucasduete.cordova.simplePlugin.SimpleService"
+                android:exported="false">
+            </service>
+        </config-file>
+
+        <source-file src="src/android/SimplePlugin.java" target-dir="src/cordova-plugin-simplePlugin/SimplePlugin" />
+
+        <source-file src="src/android/SimpleService.java" target-dir="src/cordova-plugin-simplePlugin/SimplePlugin" />
+    </platform>
+
+</plugin>

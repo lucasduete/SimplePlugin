@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-simplePlugin",
+  "version": "1.0.0",
+  "description": "A simple cordova android plugin",
+  "cordova": {
+    "id": "cordova-plugin-simplePlugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Lucas Duete <lm.duete@bol.com.br>",
+  "license": "MIT"
+}
